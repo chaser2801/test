@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo "DELETING FILES"
+
+rm -r Files
+
+echo "DONE DELTEING FILES"
