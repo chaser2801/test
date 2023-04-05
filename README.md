@@ -1,2 +1,2 @@
 # Script Repository
-test repository
+Repository for my scripts.
