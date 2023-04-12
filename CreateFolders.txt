@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo "How many Folders do you want to create"
+
+read varinp1
+
+for i in $(seq 1 $varinp1);
+
+do
+ 
+mkdir Files$varinp1
+
+done
