@@ -6,6 +6,6 @@ echo "Creating Files"
 
 for i in $(seq 1 100);
         do
-                dd if=/dev/zero of=Files/File1 bs=1M count=10
+                dd if=/dev/zero of=Files/File$i bs=1M count=10
         done
 echo  "DONE CREATING FILES"
