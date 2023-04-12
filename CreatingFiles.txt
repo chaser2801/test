@@ -1,11 +1,15 @@
 #! /bin/bash
 
+echo "How many files do you want to create"
+
+read varinp
+
 mkdir Files
 
 echo "Creating Files"
 
-for i in $(seq 1 100);
+for i in $(seq 1 $varinp);
         do
-                dd if=/dev/zero of=Files/File$i bs=1M count=10
+                 dd if=/dev/zero of=Files/File$i bs=1M count=10
         done
 echo  "DONE CREATING FILES"
