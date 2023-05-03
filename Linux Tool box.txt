@@ -1,0 +1,70 @@
+#! /bin/bash
+# Created by Robert I Chase
+# NOS 125
+
+#This script will execute a menu
+
+clear
+echo "Hello, This script will do something."
+echo "#########################################################"
+echo "####################### :- ) ############################"
+echo "#########################################################"
+until [ "$ans" = 3 ]
+        do
+        echo "Please select the following one of the following options:"
+        echo "enter 1 - Create Folders"
+        echo "enter 2 - Delete files"
+        echo "enter 3 - Exit the Script"
+        read -p "Please make a select " ans
+
+        echo "you selected $ans"
+
+#if [ $ans = 1 ]
+#       then
+#             #! /bin/bash
+
+echo "How many Folders do you want to create"
+
+read varinp1
+
+for i in $(seq 1 $varinp1);
+
+do
+
+mkdir /data/Folder$i
+
+done"
+#       else
+#               echo "Goodbye"
+#fi
+
+        case $ans in
+
+
+
+
+
+
+#if [ $ans = 2 ]
+#       then
+#             #! /bin/bash
+
+echo "How many files do you want to delete"
+
+read varinp
+rm Files
+
+echo "Deleting Files"
+
+for i in $(seq 1 $varinp);
+        do
+                 dd if=/dev/zero of=Files/File$i bs=1M count=10
+        done
+echo  "DONE DELETING FILES"
+
+done"
+#       else
+#               echo "Goodbye"
+#fi
+
+        case $ans in
