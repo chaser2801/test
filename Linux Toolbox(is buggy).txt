@@ -1,0 +1,93 @@
+#!/bin/bash
+# Created by Robert I. Chase
+# Student NOS 125 SP2023
+
+#This script will execute a menu for your linux toolbox
+clear
+echo "Hello, Welcome to your Linux Toolbox!"
+echo "#########################################################"
+echo "####################### :- ) ############################"
+echo "#########################################################"
+until [ "$ans" = 4 ]
+        do
+        echo "Please select the following one of the following options:"
+        echo "enter 1 - "Create Folders"
+        echo "enter 2 - "Create Files"
+        echo "enter 3 - "Remove Folders"
+	echo "enter 4 - "Remove Files"
+        echo "enter 5 - "Exit the Script"
+        read -p "Please make a select " $ans "
+
+        echo "you selected $ans"
+
+
+
+        case $ans in
+
+
+
+                1) #! /bin/bash
+
+echo "How many Folders do you want to create"
+
+read -r varinp1
+
+for i in $(seq 1 "$varinp1");
+
+do
+
+mkdir "/data/Folder$i"
+
+done;;
+
+
+
+
+
+                2) #! /bin/bash
+
+echo "How many files do you want to create?"
+
+read -r varinp
+
+
+echo "Where do you wnat to put them?"
+
+read -r varinp2
+
+
+echo "Creating Files"
+
+for i in $(seq 1 "$varinp");
+        do
+                 dd if=/dev/zero of="$varinp2"/File"$i" bs=1M count=10
+        done
+echo  "DONE CREATING FILES";;
+
+
+
+
+
+
+                3) #! /bin/bash
+
+echo "How many Folders do you want to remove"
+
+read -r varinp1
+
+for i in $(seq 1 "$varinp1");
+
+do
+
+rm "/data/Folder$i"
+
+done;;
+
+
+
+
+
+		    4) echo "Thank you for using this script";;
+               
+        esac
+done
